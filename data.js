@@ -69,11 +69,8 @@ var data = [
     {lat: 5.8499999999999215,lng:-69.49999999999983,label:""}, 
     {lat: -14.550000000000077,lng:-59.29999999999983,label:""}, 
     {lat: -19.650000000000077,lng:124.30000000000024,label:""}, 
-    {lat: -89.35000000000016,lng:-35.49999999999984,label:""}, 
-
     {lat:42.35843,lng:-71.05977, label: "Boston"},
     {lat:25.77427,lng:-80.19366, label: "Miami"},
-    {lat:37.77493,lng:-122.41942, label: "San Francisco"},
     {lat:-23.5475,lng:-46.63611, label: "Sao Paulo"},
     {lat:-12.04318,lng:-77.02824, label: "Lima"},
     {lat:21.30694,lng:-157.85833, label: "Honolulu"},
