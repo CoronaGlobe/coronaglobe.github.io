@@ -76,14 +76,15 @@ var data = [
     {lat:21.30694,lng:-157.85833, label: "Honolulu"},
     {lat:-31.95224,lng:115.8614, label: "Perth"},
     {lat:-33.86785,lng:151.20732, label: "Sydney"},
-    {lat: -42, lng: 174, label: "New Zealand"},
+    {lat: -42, lng: 174, label: "Wellington"},
     {lat:22.28552,lng:114.15769, label: "Hong Kong"},
     {lat:19.07283,lng:72.88261, label: "Mumbai"},
     {lat:30.06263,lng:31.24967, label:"Cairo"},
-    {lat:-33.92584,lng:18.42322, label:"Cape Town"},
+    {lat:6.45471,lng:3.38876, label:"Lagos"},
     {lat:52.52437,lng:13.41053, label:"Berlin"},
     {lat:55.95206,lng:-3.19648, label:"Edinburgh"},
     {lat:55.75222,lng:37.61556, label:"Moscow"},
+    {lat:48.13641,lng:11.57754, label:"Munich"},
 
 
 ]
