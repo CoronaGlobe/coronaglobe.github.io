@@ -27,9 +27,12 @@
         <!-- endref -->
 
         <script>
-
+ 				min = Math.ceil(min);
+  				max = Math.floor(max);
+  				return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+			}
             var globe,
-                globeCount = 0;
+            	globeCount = 0;
 
 
             function createGlobe(){
@@ -48,7 +51,7 @@
                     markerColor: $("#marker-color").val(),
                     pinColor: $("#pin-color").val(),
                     satelliteColor: $("#satellite-color").val(),
-                    scale: parseFloat($("#globe-scale").val()),
+                    scale: parseFloat(1),
                     dayLength: 1000 * parseFloat($("#globe-spr").val()),
                     introLinesDuration: parseFloat($("#globe-id").val()),
                     maxPins: parseFloat($("#globe-mp").val()),
@@ -133,11 +136,11 @@
                         
                         var lat = Math.random() * 180 - 90,
                            lon = Math.random() * 360 - 180,
-                           name = "Test " + Math.floor(Math.random() * 100);
+                           name = "Infected No. " + getRandomInt(1, 3000000);
 
                         globe.addPin(lat,lon, name);
 
-                    }, 5000);
+                    }, 250);
                 }
                 
                 /* add 6 satellites in random locations */
@@ -162,12 +165,18 @@
                         }
 
                         globe.addConstellation(constellation, opts);
-                    }, 4000);
+                    }, 2000);
 
                     /* add the connected points that are in the movie */
                     setTimeout(function(){
-                        globe.addMarker(49.25, -123.1, "Vancouver");
-                        globe.addMarker(35.6895, 129.69171, "Tokyo", true);
+                        globe.addMarker(30.64353, 114.32472, "Wuhan");
+                        globe.addMarker(35.85402, 128.61034, "Daegu", true);
+						globe.addMarker(45.46888, 9.18109, "Milan", true);
+						globe.addMarker(35.68877, 51.41503, "Tehran", true);
+						globe.addMarker(35.68321, 139.80894, "Tokyo", true);
+						globe.addMarker(37.77986, -122.42905, "San Fransisco", true);
+						globe.addMarker(47.60357, -122.32945, "Seattle", true);
+						globe.addMarker(48.13641, 11.57754, "Munich", true);
                     }, 2000);
                 }
 
@@ -483,10 +492,10 @@
                         <input type="text" id="globe-si" data-slider="true" data-slider-range="3,12" data-slider-step="1" data-slider-highlight="true" value="8"/>
 
                         <label>
-                            Load Dummy Data
+                            Im̴̧͋p̴̳̻̲̓ǒ̴͎̼͇̬͖͑̍͝͝r̶̨͉̼͔̺̙͛̑͠e̵̛̬̲̘̓̈́̐̐̈̐̎̀͌̆͋̎́̆̄̆̓́͂̊̓̄̎̅̽̚͝͠͠͝͝r̷̨̡̡̢̢̨͉̝͈̹̤̘͚͕̖̤̮̖̺̗̳̟̯͖͔̬̬̱͕̺̺̗̼̹̙͕͇̼͍̗͓̻̫̯̠͇̙̲̆́̒͐̿̃̓̃̉̌͐̂̔̂́̈̍̔͋̎͆̓̎͊͘͜͠ͅr̶̯̖͔͎̩̬͖̥̳͓̞͇̟̗̪̣̺̲̟͙̪͙̙̻̳͕̹̩͍̎̑͊͛͊͂̄̈̿̽̋́͌̅͊͋̎̆̂͛̔͆͆͂̒͗̐̍̍̕̕̕͝ͅ^̶̢̢̡̡̢̛̩̱̻̜̙̭̩̖̼̱̜̣̜̺͔̭͕̝̱̤͙͔͕̙̪͔̻͖͈̠̩̥͋̔̽̈͑̉̒̃̌́̽̎̍̓̎̀̈̇̏͘̚̕͝͝͠͠ͅ&̷̢̳̘͙̳̲̳̮͔̫̩̻͉̬̩͇͈̦̪̻͙̭̞́͐̽̀̋͑͛̉̅́̌̈̍͜͝͠͝ͅ8̴̨̛̱̖̼̞̲̬̺̜̱̞̜̻͖̪͍̺̗̲͎̜̻͈͖͊̓̂͒̏̅̀͋̄͊̀̽̽̕͘̚̕*̸̧̛̘̘̻͇̜͈͇̣͔̠̺͙͓͕͉̺͎̈̇̃̃̈̿̄͛̈́̾́́͑̃̄͘̚3̵̢͎̳̮̮̙̰̣̯͚̪̜̪͔̠̹̘̖͓̻͖̱̳͕̦̭͓̣͓̩̫̖͈̫̮̱̗̥͚̜͇̝͓̾͂̏̈́͂̋̊̃͐̿́͊̔͑̈́̈͋́̋̎͒͜͝͝ͅ7̷̡̡̢͉͓͇͔̪͇̲̗̝͚͓͕͙͎̤̦̮̟̟͔͉͇͙̤̟̝̲̙̩͕̩̘̝͕̝̜̫̲̘̣̺͎͆̽̈́̒͋̾̉̀̈́̾͐͐̓̋͑̚͜͝͝͝ͅͅ
                         </label>
                         <div class="switch">
-                            <input type="checkbox" id="globe-dd" value="1" checked>
+                            <input type="checkbox" id="globe-dd" value="0" checked>
                         </div>
                     </div>
 
